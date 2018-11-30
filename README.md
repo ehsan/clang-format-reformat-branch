@@ -16,6 +16,10 @@ follow the following steps in order to rebase your local changes on top of the
 reformatted tree.
 
   * Clone this repository somewhere on your local disk.
+  * Run this command inside your clone directory:
+
+  * `   pip install -r requirements.txt`
+
   * Use git remote update to pull in the reformat commit into your local git
     repository (but don't try to merge with it or rebase on top of it just
     yet, you only want to make sure the git commit exists in the git database)
