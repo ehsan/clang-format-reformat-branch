@@ -23,16 +23,16 @@ reformatted tree.
     remote branch that you pulled from in the previous step is called "m-c",
     you can run this command to find the commit:
 
-      git log --grep=1511181 m-c # grep for the bug number in the commit message
+  * `   git log --grep=1511181 m-c # grep for the bug number in the commit message`
     
-    Let's assume this commit is abcdef12.
+  * Let's assume this commit is abcdef12.
   * Rebase your local branch on top of the parent of that commit (abcdef12~)
     and ensure any possible conflicts have been resolved.
   * Run the following command in the root of your mozilla-central checkout:
     
-      /path/to/clang-format-reformat-branch/clang_format.py reformat-branch abcdef12 abcdef12~ m-c
+  * `  /path/to/clang-format-reformat-branch/clang_format.py reformat-branch abcdef12 abcdef12~ m-c`
 
-    m-c here is the remote branch that is tracking mozilla-central, which is
+  * m-c here is the remote branch that is tracking mozilla-central, which is
     usually where the reformat commit has come from.  If you use this popular
     github repo [4], then this is probably called "central" in your setup.
 
@@ -48,14 +48,14 @@ it out when it's finished.  It will not modify the original "foo" branch in any
 way, so it is not destructive.  If you're happy with the results, you may run
 the following commands to make the results permanent:
 
-  * git checkout foo
-  * git reset --hard foo-reformatted # make sure the local directory is unmodified!!!
+  * `git checkout foo`
+  * `git reset --hard foo-reformatted # make sure the local directory is unmodified!!!`
 
 
 References
 ==========
 
-[1] https://github.com/mongodb/mongo/blob/master/buildscripts/clang_format.py
-[2] https://engineering.mongodb.com/post/succeeding-with-clangformat-part-3-persisting-the-change
-[3] https://bugzilla.mozilla.org/show_bug.cgi?id=1511181
-[4] https://github.com/mozilla/gecko
+* [1] https://github.com/mongodb/mongo/blob/master/buildscripts/clang_format.py
+* [2] https://engineering.mongodb.com/post/succeeding-with-clangformat-part-3-persisting-the-change
+* [3] https://bugzilla.mozilla.org/show_bug.cgi?id=1511181
+* [4] https://github.com/mozilla/gecko
