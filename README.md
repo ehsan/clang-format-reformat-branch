@@ -11,7 +11,7 @@ thanks to the MongoDB project for providing the original script.
 Instructions
 ============
 
-After the tree-wise conversion planned to happen on Nov 30 2018 [3], you can
+After the tree-wide conversion planned to happen on Nov 30 2018 [3], you can
 follow the following steps in order to rebase your local changes on top of the
 reformatted tree.
 
